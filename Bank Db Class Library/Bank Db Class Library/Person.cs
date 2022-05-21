@@ -13,6 +13,25 @@ namespace Bank_Db_Class_Library
             BankWorkers = new HashSet<BankWorker>();
         }
 
+        public Person(
+            string Egn,
+            string FirstName,
+            string MiddleName,
+            string LastName,
+            string Residence,
+            DateTime BirthDay)
+        {
+            this.Egn = Egn;
+            this.FirstName = FirstName;
+            this.MiddleName = MiddleName;
+            this.LastName = LastName;
+            this.Residence = Residence;
+            this.BirthDay = BirthDay;
+
+            Accounts = new HashSet<Account>();
+            BankWorkers = new HashSet<BankWorker>();
+        }
+
         public string Egn { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }

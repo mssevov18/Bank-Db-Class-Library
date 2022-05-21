@@ -7,6 +7,22 @@ namespace Bank_Db_Class_Library
 {
     public partial class Request
     {
+        public Request(
+            string Requester,
+            DateTime Timestamp,
+            bool? IsSuccessful,
+            string TableAffected,
+            bool? WillDelete,
+            string Arguments)
+        {
+            this.Requester = Requester;
+            this.Timestamp = Timestamp;
+            this.IsSuccessful = IsSuccessful;
+            this.TableAffected = TableAffected;
+            this.WillDelete = WillDelete;
+            this.Arguments = Arguments;
+        }
+
         public int RequestId { get; set; }
         public string Requester { get; set; }
         public DateTime Timestamp { get; set; }
@@ -14,5 +30,13 @@ namespace Bank_Db_Class_Library
         public string TableAffected { get; set; }
         public bool? WillDelete { get; set; }
         public string Arguments { get; set; }
+
+        public override string ToString() => $"Request №{RequestId}. By {RequesterToString()}. At {Timestamp.ToString()}";
+
+#warning "RequesterToString" Function not implemented
+        private string RequesterToString()
+        {
+            return "#not implemented#";
+        }
     }
 }
