@@ -36,6 +36,17 @@ namespace Bank_Db_Class_Library
 #warning "RequesterToString" Function not implemented
         private string RequesterToString()
         {
+            switch (Requester)
+            {
+                case "T":
+                    return "'Teller App'";
+                case "S":
+                    return "'Server App'";
+                case "C":
+                    return "'Cashier App'";
+                case "W":
+                    return "'Website'";
+            }
             return "#not implemented#";
         }
     }

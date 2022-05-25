@@ -375,8 +375,7 @@ namespace Bank_Db_Class_Library
                     .HasColumnName("arguments");
 
                 entity.Property(e => e.IsSuccessful)
-                    .HasColumnName("is_successful")
-                    .HasDefaultValueSql("((0))");
+                    .HasColumnName("is_successful");
 
                 entity.Property(e => e.Requester)
                     .IsRequired()
