@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Bank Db Class Library": {
+      "commandName": "Project",
+      "commandLineArgs": "Server=.\\SQLExpress;Database=Bank_Database;Trusted_Connection=True;"
+    }
+  }
+}

@@ -41,5 +41,7 @@ namespace Bank_Db_Class_Library
 
         public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<BankWorker> BankWorkers { get; set; }
+
+        public override string ToString() => $"{FirstName} {MiddleName} {LastName} | {Egn} | {Residence} | {BirthDay}";
     }
 }

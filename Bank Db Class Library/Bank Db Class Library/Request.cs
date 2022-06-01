@@ -31,9 +31,8 @@ namespace Bank_Db_Class_Library
         public bool? WillDelete { get; set; }
         public string Arguments { get; set; }
 
-        public override string ToString() => $"Request №{RequestId}. By {RequesterToString()}. At {Timestamp.ToString()}";
+        public override string ToString() => $"Request №{RequestId}[{IsSuccessfulToString()}]. {WillDeleteToString()} To table \'{TableAffected}\'. By {RequesterToString()}. At {Timestamp.ToString()}";
 
-#warning "RequesterToString" Function not implemented
         private string RequesterToString()
         {
             switch (Requester)
@@ -48,6 +47,16 @@ namespace Bank_Db_Class_Library
                     return "'Website'";
             }
             return "#not implemented#";
+        }
+
+        private string WillDeleteToString()
+        {
+            return WillDelete is null ? "Add" : WillDelete.GetValueOrDefault() ? "Delete" : "Update";
+        }
+
+        private string IsSuccessfulToString()
+        {
+            return IsSuccessful is null ? "Pending" : IsSuccessful.GetValueOrDefault() ? "Success" : "Failure";
         }
     }
 }

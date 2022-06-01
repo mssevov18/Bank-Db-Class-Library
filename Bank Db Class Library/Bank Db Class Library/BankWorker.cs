@@ -7,6 +7,7 @@ namespace Bank_Db_Class_Library
 {
     public partial class BankWorker
     {
+        public BankWorker() { }
         public BankWorker(
             string Username,
             string Password,
@@ -55,5 +56,19 @@ namespace Bank_Db_Class_Library
 
         public virtual Bank Bank { get; set; }
         public virtual Person PersonEgnNavigation { get; set; }
+
+        ///IDEA: Print bank and person data too.
+        ///public override string ToString() => $"{Username}({PersonEgnNavigation.FirstName} " +
+        ///        PersonEgnNavigation is null ? "null" : PersonEgnNavigation.MiddleName + " " +
+        ///        PersonEgnNavigation is null ? "null" : PersonEgnNavigation.LastName + ")" +
+        ///        $"[{PersonEgn}] - " +
+        ///        $"Works in " + Bank is null ? "null" : Bank.Name +
+        ///        $", for {Salary}$";
+        public override string ToString() => $"{Username}({PersonEgnNavigation.FirstName} " +
+                PersonEgnNavigation is null ? "null" : PersonEgnNavigation.MiddleName + " " +
+                PersonEgnNavigation is null ? "null" : PersonEgnNavigation.LastName + ")" +
+                $"[{PersonEgn}] - " +
+                $"Works in " + Bank is null ? "null" : Bank.Name +
+                $", for {Salary}$";
     }
 }
