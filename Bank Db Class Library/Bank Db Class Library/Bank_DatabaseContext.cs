@@ -9,6 +9,7 @@ namespace Bank_Db_Class_Library
     public partial class Bank_DatabaseContext : DbContext
     {
         public static string ConnectionString;
+        public static int BankId;
 
         public Bank_DatabaseContext()
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 #nullable disable
 
@@ -14,6 +15,29 @@ namespace Bank_Db_Class_Library
             TransactionAccountConnectionAccountRecieverIbanNavigations = new HashSet<TransactionAccountConnection>();
             TransactionAccountConnectionAccountSenderIbanNavigations = new HashSet<TransactionAccountConnection>();
         }
+        public Account(
+                string AccountIban,
+                decimal Balance,
+                int BankId,
+                string PersonEgn,
+                DateTime CreationDate,
+                string Email,
+                string Password
+            )
+        {
+            CardReaders = new HashSet<CardReader>();
+            Cards = new HashSet<Card>();
+            TransactionAccountConnectionAccountRecieverIbanNavigations = new HashSet<TransactionAccountConnection>();
+            TransactionAccountConnectionAccountSenderIbanNavigations = new HashSet<TransactionAccountConnection>();
+
+            this.AccountIban = AccountIban;
+            this.Balance = Balance;
+            this.BankId = BankId;
+            this.PersonEgn = PersonEgn;
+            this.CreationDate = CreationDate;
+            this.Email = Email;
+            this.Password = Password;
+        }
 
         public string AccountIban { get; set; }
         public decimal Balance { get; set; }
@@ -21,7 +45,41 @@ namespace Bank_Db_Class_Library
         public string PersonEgn { get; set; }
         public DateTime CreationDate { get; set; }
         public int AccountId { get; set; }
-        public string Email { get; set; }
+
+        //Local-part@Domain
+        //
+        // Local-part
+        // uppercase and lowercase Latin letters A to Z and a to z
+        // digits 0 to 9
+        // printable characters !#$%&'*+-/=?^_`{|}~
+        // dot., provided that it is not the first or last character and provided also that it does not appear consecutively(e.g., John..Doe @example.com is not allowed).
+        //
+        // Domain
+        // uppercase and lowercase Latin letters A to Z and a to z;
+        // digits 0 to 9, provided that top-level domain names are not all-numeric;
+        // hyphen -, provided that it is not the first or last character.
+        private string email;
+        public string Email
+        {
+            get => email;
+            set
+            {
+                if (value == string.Empty)
+                    email = value;
+                else
+                {
+                    if (value.Split('@').Length == 2)
+                    {
+                        if (Regex.IsMatch(value, @"^\w+([-+.']\w+)*@[^\W_]+(([-.]|[^_])[^\W_]+)*\.?[^\W_]+(([-.]|[^_])[^\W_]+)*$"))
+                            email = value;
+                        else
+                            throw new FormatException($"Invalid email format! {value}");
+                    }
+                    else
+                        throw new FormatException($"Invalid email format! {value}");
+                }
+            }
+        }
         public string Password { get; set; }
 
         public virtual Bank Bank { get; set; }
