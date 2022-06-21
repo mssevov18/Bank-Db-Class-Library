@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 #nullable disable
 
@@ -7,7 +8,11 @@ namespace Bank_Db_Class_Library
 {
     public partial class BankWorker
     {
-        public BankWorker() { }
+        public BankWorker()
+        {
+            IsDeleted = false;
+        }
+
         public BankWorker(
             string Username,
             string Password,
@@ -17,6 +22,7 @@ namespace Bank_Db_Class_Library
             int BankId,
             string PersonEgn)
         {
+            IsDeleted = false;
             this.Username = Username;
             this.Password = Password;
             this.IsAdmin = IsAdmin;
@@ -53,6 +59,9 @@ namespace Bank_Db_Class_Library
         public string PersonEgn { get; set; }
         public bool IsAdmin { get; set; }
         public decimal Salary { get; set; }
+
+        [DefaultValue(false)]
+        public bool IsDeleted { get; set; }
 
         public virtual Bank Bank { get; set; }
         public virtual Person PersonEgnNavigation { get; set; }

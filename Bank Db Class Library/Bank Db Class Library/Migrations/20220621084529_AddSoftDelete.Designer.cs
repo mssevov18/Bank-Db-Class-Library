@@ -4,14 +4,16 @@ using Bank_Db_Class_Library;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bank_Db_Class_Library.Migrations
 {
     [DbContext(typeof(Bank_DatabaseContext))]
-    partial class Bank_DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20220621084529_AddSoftDelete")]
+    partial class AddSoftDelete
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

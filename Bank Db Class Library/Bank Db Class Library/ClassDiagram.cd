@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bank_Db_Class_Library.Account" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQABAAQAACAAAAAgAggAgAAIYAAAAAACACCAAAAAAAA=</HashCode>
+      <FileName>Account.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.Bank" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAQAQAAIAACAACAAAAAAAAA=</HashCode>
+      <FileName>Bank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.Bank_DatabaseContext" Collapsed="true">
+    <Position X="4" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAAAYAwAAAAAAAAAAAIcAAKAACAACAAABAAAAA=</HashCode>
+      <FileName>Bank_DatabaseContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.BankWorker" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAAAAAAAEAQAAgAAAKAAAAAACACAAAgAAAAA=</HashCode>
+      <FileName>BankWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.Branch" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAABAAAAAAAAAAACACAAAAAAAAA=</HashCode>
+      <FileName>Branch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.Card" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAgAAAAgECAAAAQAAAAAAAAAEAAAkAAAA=</HashCode>
+      <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.CardReader" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAACAAAAACEAAACAAAA=</HashCode>
+      <FileName>CardReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.GetAccountDatum" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAABAAAAAAQAA=</HashCode>
+      <FileName>GetAccountDatum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.GetBankWorkerDatum" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAA=</HashCode>
+      <FileName>GetBankWorkerDatum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.GetBranchDatum" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>GetBranchDatum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.Person" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAEAAQQAAAAAAAIAACAAAAAAAAgAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.Request" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAABQIgAAAQEAAACAAAAAAAAAAAAIAAAAAAAABA=</HashCode>
+      <FileName>Request.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.Transaction" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAIAACACAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transaction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bank_Db_Class_Library.TransactionAccountConnection" Collapsed="true">
+    <Position X="0.75" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAAAgACAQAAAAAAAAAAAAAAEAAACAAAA=</HashCode>
+      <FileName>TransactionAccountConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

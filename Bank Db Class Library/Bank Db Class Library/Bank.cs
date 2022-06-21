@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 #nullable disable
 
@@ -9,6 +10,7 @@ namespace Bank_Db_Class_Library
     {
         public Bank()
         {
+            IsDeleted = false;
             Accounts = new HashSet<Account>();
             BankWorkers = new HashSet<BankWorker>();
             Branches = new HashSet<Branch>();
@@ -17,6 +19,7 @@ namespace Bank_Db_Class_Library
 
         public Bank(int BankId, string Name)
         {
+            IsDeleted = false;
             this.BankId = BankId;
             this.Name = Name;
 
@@ -28,6 +31,9 @@ namespace Bank_Db_Class_Library
 
         public int BankId { get; set; }
         public string Name { get; set; }
+
+        [DefaultValue(false)]
+        public bool IsDeleted { get; set; }
 
         public virtual ICollection<Account> Accounts { get; set; }
         public virtual ICollection<BankWorker> BankWorkers { get; set; }

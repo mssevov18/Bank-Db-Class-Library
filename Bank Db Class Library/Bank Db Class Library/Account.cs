@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text.RegularExpressions;
 
 #nullable disable
@@ -10,6 +11,7 @@ namespace Bank_Db_Class_Library
     {
         public Account()
         {
+            IsDeleted = false;
             CardReaders = new HashSet<CardReader>();
             Cards = new HashSet<Card>();
             TransactionAccountConnectionAccountRecieverIbanNavigations = new HashSet<TransactionAccountConnection>();
@@ -25,6 +27,7 @@ namespace Bank_Db_Class_Library
                 string Password
             )
         {
+            IsDeleted = false;
             CardReaders = new HashSet<CardReader>();
             Cards = new HashSet<Card>();
             TransactionAccountConnectionAccountRecieverIbanNavigations = new HashSet<TransactionAccountConnection>();
@@ -81,6 +84,9 @@ namespace Bank_Db_Class_Library
             }
         }
         public string Password { get; set; }
+
+        [DefaultValue(false)]
+        public bool IsDeleted { get; set; }
 
         public virtual Bank Bank { get; set; }
         public virtual Person PersonEgnNavigation { get; set; }

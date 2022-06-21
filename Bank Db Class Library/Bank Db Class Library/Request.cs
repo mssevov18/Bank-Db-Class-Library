@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 #nullable disable
 
@@ -7,6 +8,11 @@ namespace Bank_Db_Class_Library
 {
     public partial class Request
     {
+        public Request()
+        {
+            IsDeleted = false;
+        }
+
         public Request(
             string Requester,
             DateTime Timestamp,
@@ -15,6 +21,7 @@ namespace Bank_Db_Class_Library
             bool? WillDelete,
             string Arguments)
         {
+            IsDeleted = false;
             this.Requester = Requester;
             this.Timestamp = Timestamp;
             this.IsSuccessful = IsSuccessful;
@@ -30,6 +37,9 @@ namespace Bank_Db_Class_Library
         public string TableAffected { get; set; }
         public bool? WillDelete { get; set; }
         public string Arguments { get; set; }
+
+        [DefaultValue(false)]
+        public bool IsDeleted { get; set; }
 
         public override string ToString() => $"Request №{RequestId}[{IsSuccessfulToString()}]. {WillDeleteToString()} To table \'{TableAffected}\'. By {RequesterToString()}. At {Timestamp.ToString()}";
 
